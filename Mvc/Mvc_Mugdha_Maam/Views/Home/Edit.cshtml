@@ -1,0 +1,10 @@
+﻿@model Mvc_Mugdha_Maam.Models.Emp
+<h3>Edit New Emplyee</h3>
+<form action="/Home/Edit" method="post">
+    <input type="hidden" name="no" value=@Model.no />
+    <input type="Text" name="name" value=@Model.name />
+    <input type="Text" name="address" value=@Model.address/>
+    <br /> <br />
+    <input type="submit" value="Add New Row" />
+
+</form>

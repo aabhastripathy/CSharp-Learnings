@@ -1,0 +1,31 @@
+﻿@model List<Mvc_Mugdha_Maam.Models.Emp>
+<a href="/Home/Create">Create New Record</a>
+
+
+
+<h1>Emp Records</h1>
+<table border=" = 1" width="200" height="200">
+    <thead>
+        <tr>
+            <th>Number</th>
+            <th>Name</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var emp in Model)
+            {
+        <tr>
+                <td>@emp.no</td>
+                <td>@emp.name</td>
+                <td>@emp.address</td>
+                <td>
+                    <a href = "/Home/Edit/@emp.no">Edit</a>
+                </td>
+                <td>
+                    <a href="/Home/Delete/@emp.no">Delete</a>
+                </td>
+        </tr>
+            }
+    </tbody>
+</table>
